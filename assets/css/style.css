@@ -174,7 +174,7 @@ tfoot td, table th {
 
 .intro-content {
   position: relative;
-  top: -8rem;
+  /* top: -8rem; */
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: var(--gap);
@@ -260,4 +260,92 @@ tfoot td, table th {
 
 .gallery-img img:hover {
   transform: translate(-3%, 3%) scale(1.2) rotate(5deg)
+}
+
+/* --------------------------contact----------------------------- */
+
+.contact-form {
+  grid-column: span 2;
+}
+
+.contact-form .form-grid {
+  border: none;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap); 
+}
+
+.form-grid legend {
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  flex: 1 1 320px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  box-shadow: 0 0 10px 2px var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 1.5rem 2rem;
+  width: 100%;
+  font-size: 3rem;
+}
+
+  body .full-width {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+.form-group button {
+  border: 0.5rem solid var(--primary-color);
+  background: var(--white-color);
+  color: var(--primary-color);
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.form-group ::placeholder {
+  color: var(--dark-gray-color);
+}
+
+/* -----------------------footer-------------------------------- */
+.footer {
+  text-align: center;
+  border-top: 3px solid var(--light-gray-color);
+  font-size: 1.6rem;
+}
+
+.footer a {
+  color: var(--primary-color);
+}
+
+.heart {
+  color: var(--secondary-color);
+}
+
+p {
+  margin: 0;
+  padding: 3rem;
 }
