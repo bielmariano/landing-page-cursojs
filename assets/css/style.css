@@ -216,6 +216,7 @@ tfoot td, table th {
 
 .grid-main-heading {
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .grid-description {
@@ -304,6 +305,7 @@ tfoot td, table th {
   padding: 1.5rem 2rem;
   width: 100%;
   font-size: 3rem;
+  outline: none;
 }
 
   body .full-width {
@@ -350,6 +352,26 @@ p {
   padding: 3rem;
 }
 
+.close-menu {
+display: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--white-color);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--primary-color);
+  transform: rotate(-90deg);
+  border: 0.1rem solid var(--primary-color);
+}
+
 /* ---------------------media query---------------------------- */
 
 @media (max-width: 800px) {
@@ -370,4 +392,92 @@ p {
   .grid-one-content {
     display: block;
   }
+
+  .menu {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .menu-content, .menu-content ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-content {
+    height: 100vh;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .close-menu-label::after {
+    content:'☰';
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .close-menu:checked~.menu {
+    display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+    display: block;
+    content: '×'
+  }
+
+  .menu-spacing {
+    display: none;
+  }
+
+  /* .top3-content h2, .grid-one-content h2 {
+    font-size: 3.6rem;
+  } */
+
+  .form-grid input,
+  .form-grid textarea {
+    width: 85%;
+  }
+
+  .intro-text-content h2 {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3 {
+    font-size: 3.4rem;
+  }
+
+  h4 {
+    font-size: 3.2rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+  }
+
+  h6 {
+    font-size: 2.8rem;
+  }
+
+
+  
 }
